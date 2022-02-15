@@ -1,10 +1,18 @@
 import random
 from colorama import Fore
+
 #Gas Level Function
-
 def gasLevelGauge():
-    gasLevelList = [Fore.BLACK+"Empty",Fore.RED+"Low",Fore.YELLOW+"Quarter Tank",Fore.LIGHTGREEN_EX+"Half Tank",Fore.GREEN+"Three Quarter Tank",Fore.GREEN+"Full"]
+    gasLevelList = ["Empty","Low","Quarter Tank","Half Tank","Three Quarter Tank","Full"]
     currentGasLevel = random.choice(gasLevelList)
-    print(currentGasLevel)
+    #print(currentGasLevel)
+    return currentGasLevel
 
-gasLevelGauge()
+#Create IF-ELIF-ELSE statements using Comparative Operators to display gas level messages
+def gasLevelAlert():
+    if gasLevelGauge() == "Empty":
+        print(Fore.RED+"     ***WARNING***\nYou have run out of gas"+Fore.RESET)
+
+
+#gasLevelGauge()
+gasLevelAlert()
