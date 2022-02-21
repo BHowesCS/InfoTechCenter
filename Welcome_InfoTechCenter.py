@@ -3,7 +3,7 @@
 # Print to one line with time delay between prints
 from time import sleep
 import colorama
-from colorama import Fore, Back, Style
+from colorama import Fore
 colorama.init(strip=False, autoreset=True)
 
 print(Fore.MAGENTA+"Welcome to Hornet's InfoTechCenter\n")
