@@ -13,7 +13,7 @@ gasLevelIndicator = gasLevelGauge()
 # Create IF-ELIF-ELSE statements using Comparative Operators == Equal To in order to display gas level messages
 def gasLevelAlert():
     gasStations = ["Shell", "BP", "Citgo", "Circle K", "Mobil", "Speedway", "Marathon", "Love's", "Meijer", "Costco"]
-    miles = random.randint(1,25)
+    miles = round(random.uniform(1, 25), 1)
     if gasLevelIndicator == "Empty":
         print(Fore.RED+"***WARNING***\n**GAS EMPTY**\nCalling Emergency Contact"+Fore.RESET)
     elif gasLevelIndicator == "Low":
