@@ -1,11 +1,16 @@
-#Welcome Branch
-# Code Name - Hornet
+# Programmer: Ben Howes
+# Date: 2.21.2022
+# Version: 1.1
 
-# Print to one line with time delay between prints
+# Import libraries
+import random
 from time import sleep
 import colorama
 from colorama import Fore
 colorama.init(strip=False, autoreset=True)
+
+# Welcome Branch
+# Code Name - Hornet
 
 print(Fore.MAGENTA+"Welcome to Hornet's InfoTechCenter\n")
 
@@ -16,8 +21,7 @@ print("Hornet's Operating System Booting Up\n")
 sleep(1)
 
 
-#Gas Branch
-import random
+# Gas Branch
 
 # Gas Level Function
 def gasLevelGauge():
@@ -31,7 +35,7 @@ gasLevelIndicator = gasLevelGauge()
 # Create IF-ELIF-ELSE statements using Comparative Operators == Equal To in order to display gas level messages
 def gasLevelAlert():
     gasStations = ["Shell", "BP", "Citgo", "Circle K", "Mobil", "Speedway", "Marathon", "Love's", "Meijer", "Costco"]
-    miles = random.randint(1,25)
+    miles = random.randint(1, 25)
     if gasLevelIndicator == "Empty":
         print(Fore.RED+"***WARNING***\n**GAS EMPTY**\nCalling Emergency Contact")
     elif gasLevelIndicator == "Low":
